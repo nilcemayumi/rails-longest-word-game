@@ -1,0 +1,14 @@
+<div class="container m-3">
+  <h1>Result</h1>
+  <div class="mt-3">
+    <% case @message %>
+    <% when 1 %>
+        <p><strong>Congratulations! </strong><%= @word %> is a valid English word!</p>
+    <% when 2 %>
+        <p>Sorry, but <strong><%= @word %></strong> does not seem to ba a valid English word...</p>
+    <% else %>
+        <p>Sorry, but <strong><%= @word %></strong> can't be built out of <%= @letters_list %></p>
+    <% end %>
+    <%= link_to 'Play again', new_path %>
+  </div>
+<div>
